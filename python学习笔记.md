@@ -404,15 +404,28 @@ set1 ^ set2
 ```python
 # 创建字典的字面量语法
 scores = {'q':1, 'w':2}
+
 # 创建字典的构造器语法
 items1 = dict(one = 1, two = 2)
+
 # 创建字典的推导式语法
 items2 = {num: num ** 2 for num in range(1, 10)}
+
+# 字典元素的添加和修改
+scores['x'] = 3  # 如果键不存在，则为添加操作
+scores['q'] = 3  # 键已存在，对应修改操作
+
 # 通过键可以获得字典中对应的值
 print(scores['q'])
+
 # 对字典中所有的键对进行遍历
 for key in scores:
     print(f'{key}: {scores[key]}')
+
+# 判断字典中的键是否存在
+if 'q' in scores:  # key in dict
+  print(scores['q'])
+
 # 删除字典中元素，pop内为指定的键值
 scores.pop('q')
 scores.pop('e', 'error')  # 'e'在字典中不存在，所以返回指定内容('error')

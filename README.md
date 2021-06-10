@@ -28,8 +28,8 @@ Python 实现一个基于 DV 算法的路由选择协议，根据网络状态定
     * `self.maxValidTime`
   * `self.timerList`: 节点计时器列表
   * `self.neighbor`: 将初始化列表中的邻居信息备份
-  * `self.routeTable`
-  * `self.isOn = 1`: 表示存储器正处于运行状态
+  * `self.routeTable`: 路由表**字典**
+  * `self.isOn = True`: 表示存储器正处于运行状态
   * `self.sendSequenceNumber`: 发送包的序列号
   * `self.recvSequenceNumber`: 接收包的序列号 
 * 交换的路由信息
@@ -44,22 +44,56 @@ Python 实现一个基于 DV 算法的路由选择协议，根据网络状态定
 
 ### 2. 方法
 
-* `def send_info(self.isOn, self.neighbor, self.routeTable)`
-  * 功能: 如果当前节点处于活动状态, 向该节点的所有邻居发送路由信息
-  * 参数: 
-    * `neighbor`: 节点邻居列表
-    * `routeTable`: 节点路由表
-  * 无返回值
+三个初始化函数：
 
-* `def refreshRouteTable(switchInfoList)`
-  * 功能: 根据收到的路由信息更新本节点路由表
-  * 实现：
-    * 将发来的**路由更新信息**转换成**路由表**格式：将路由表中的下一跳（路由表的neighbor）设置为路由信息中srcNode
-    * 根据转换得到的路由表中的每个项目：
-      * 若原表中没有destNode，填入路由表
-      * 如果原表中有destNode，查看下一跳路由器ID：如果原表下一跳和转换得到表下一跳相同，直接替换项目；如果不相同，如果新距离比较近就更新，否则不做处理
-      * 如果xx秒没有收到相邻路由器的更新路由表，则把其设为不可达路由器，对应neighbor中的值也会修改
-  * 返回值: RouteTable(更新后的路由表)
+* `def find_neighbor`：邻居初始化
+* `def config_init`：config初始化
+* `def timer_init`：timer初始化
+
+
+
+`def send_info(self.isOn, self.neighbor, self.routeTable)`
+
+* 功能: 如果当前节点处于活动状态, 向该节点的所有邻居发送路由信息
+* 参数: 
+  * `neighbor`: 节点邻居列表
+  * `routeTable`: 节点路由表
+* 无返回值
+
+
+
+`def refreshRouteTable(switchInfoList)`
+
+* 功能: 
+  * 根据收到的路由信息更新本节点路由表
+  * 将收到路由信息的邻居节点的计时器关闭
+* 参数：
+  * `switchInfoList`: 接收的信息
+  * `routeTable`: 原路由表
+* 实现：
+  * 将发来的**路由更新信息**转换成**路由表**格式：将路由表中的下一跳（路由表的neighbor）设置为路由信息中srcNode
+  * 根据转换得到的路由表中的每个项目：
+    * 若原表中没有destNode，填入路由表
+    * 如果原表中有destNode，查看下一跳路由器ID：如果原表下一跳和转换得到表下一跳相同，直接替换项目；如果不相同，如果新距离比较近就更新，否则不做处理
+    * 如果xx秒没有收到相邻路由器的更新路由表，则把其设为不可达路由器，对应neighbor中的值也会修改
+* 返回值: RouteTable(更新后的路由表)
+
+
+
+`def receive_info(self)`
+
+* 功能：
+  * 启动每个邻居节点的计时器并开始循环接收端口信息
+  * 如果信息来自某邻居，暂停该邻居计时器
+  * 对接收的每条信息进行分析，更新路由表
+  * 重制计时器，准备下一次接受的端口信息
+
+
+
+`def invalid_node`
+
+* 功能：处理已经失效的节点
+* 实现：将路由表中该节点距离设置为`self.unreachable`
 
 ## packet类
 
@@ -84,4 +118,19 @@ Python 实现一个基于 DV 算法的路由选择协议，根据网络状态定
   * 功能: 提取交换路由信息中内容
   * 参数: switchInfo(交换路由信息(String))
   * 返回值: switchInfoList(路由信息的List形式(List))
+
+
+
+## dvsim类(控制)
+
+指令形式
+
+```python
+# 初始化节点
+init a 50001 a.txt
+# 关闭某节点：结束节点进程
+stop a
+# 打开某节点: 为节点创建进程
+start a
+```
 

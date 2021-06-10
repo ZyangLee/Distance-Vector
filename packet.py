@@ -1,7 +1,7 @@
 def make(currentNode, routeTable):
     info = ''
-    for i in routeTable:
-        info_single = f'{currentNode};{i[0]};{i[1]}&'
+    for key in routeTable:
+        info_single = f'{currentNode};{routeTable[key][0]};{routeTable[key][1]}&'
         info += info_single
     return info[:-1]
 
