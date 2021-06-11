@@ -29,3 +29,8 @@ class Timer(object):
             return False
         else:
             return time.time() - self._start_time >= self._duration
+
+    # 将没有超时的计时器重置
+    def refresh(self):
+        if not self.timeout():
+            self._start_time = self.TIMER_STOP
