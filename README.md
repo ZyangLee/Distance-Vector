@@ -52,9 +52,9 @@ Python 实现一个基于 DV 算法的路由选择协议，根据网络状态定
 
 
 
-`def send_info(self.isOn, self.neighbor, self.routeTable)`
+`def sender(self.isOn, self.neighbor, self.routeTable)`
 
-* 功能: 如果当前节点处于活动状态, 向该节点的所有邻居发送路由信息
+* 功能: 如果当前节点处于活动状态，每三秒向**该节点的所有邻居**发送路由信息
 * 参数: 
   * `neighbor`: 节点邻居列表
   * `routeTable`: 节点路由表
@@ -80,7 +80,7 @@ Python 实现一个基于 DV 算法的路由选择协议，根据网络状态定
 
 
 
-`def receive_info(self)`
+`def receiver(self)`
 
 * 功能：
   * 启动每个邻居节点的计时器并开始循环接收端口信息
@@ -88,7 +88,7 @@ Python 实现一个基于 DV 算法的路由选择协议，根据网络状态定
   * 对接收的每条信息进行分析，更新路由表
   * 重制计时器，准备下一次接受的端口信息
 
-
+* 实现：设定一个10秒的计时器，
 
 `def invalid_node`
 
@@ -111,7 +111,7 @@ Python 实现一个基于 DV 算法的路由选择协议，根据网络状态定
 
   * 返回值: 交换的路由信息(String)
 
-    `'c;a;10&c;d;10'`
+    `'c;10;a&c;10;d'`
 
 * `packet.extract(self.switchInfo)` 
 

@@ -32,5 +32,4 @@ class Timer(object):
 
     # 将没有超时的计时器重置
     def refresh(self):
-        if not self.timeout():
-            self._start_time = self.TIMER_STOP
+        self._start_time = self.TIMER_STOP

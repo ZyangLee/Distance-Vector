@@ -7,7 +7,7 @@ def make(currentNode, routeTable):
 
 
 def extract(switchInfo):
-    data = switchInfo.spilt('&')
+    data = switchInfo.split('&')
     switchInfoList = []
     for info in data:
         tmp = info.split(';')
