@@ -1,7 +1,8 @@
 def make(currentNode, routeTable):
     info = ''
     for key in routeTable:
-        info_single = f'{currentNode};{routeTable[key][0]};{routeTable[key][1]}&'
+        #  信息内容： 发送方；距离；目的地
+        info_single = f'{currentNode};{routeTable[key][0]};{key}&'
         info += info_single
     return info[:-1]
 

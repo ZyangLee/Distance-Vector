@@ -1,0 +1,214 @@
+ 2021.  6.  11 2021/ 6/11 23:45: 4 
+Initialize Success
+## Send.Source Node=u; Sequence Number=1
+DestNode=v; Distance=2.0; Neighbor=v
+DestNode=w; Distance=5.0; Neighbor=w
+DestNode=x; Distance=1.0; Neighbor=x
+终点：v, 距离：2.0,下一跳：v
+终点：w, 距离：5.0,下一跳：w
+终点：x, 距离：1.0,下一跳：x
+ 2021.  6.  11 2021/ 6/11 23:45: 4 
+###Received. Dst Node=u; Sequence number=1
+DestNode=x; Distance=1.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45: 4 
+###Received. Dst Node=u; Sequence number=2
+DestNode=z; Distance=10.0; Neighbor=w
+ 2021.  6.  11 2021/ 6/11 23:45: 4 
+###Received. Dst Node=u; Sequence number=3
+DestNode=y; Distance=2.0; Neighbor=x
+## Send.Source Node=u; Sequence Number=2
+DestNode=v; Distance=2.0; Neighbor=v
+DestNode=w; Distance=4.0; Neighbor=x
+DestNode=x; Distance=1.0; Neighbor=x
+DestNode=y; Distance=2.0; Neighbor=x
+DestNode=z; Distance=10.0; Neighbor=w
+ 2021.  6.  11 2021/ 6/11 23:45: 7 
+###Received. Dst Node=u; Sequence number=4
+DestNode=z; Distance=10.0; Neighbor=w
+ 2021.  6.  11 2021/ 6/11 23:45: 7 
+###Received. Dst Node=u; Sequence number=5
+DestNode=z; Distance=4.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45: 7 
+###Received. Dst Node=u; Sequence number=6
+DestNode=z; Distance=4.0; Neighbor=x
+## Send.Source Node=u; Sequence Number=3
+DestNode=v; Distance=2.0; Neighbor=v
+DestNode=w; Distance=3.0; Neighbor=x
+DestNode=x; Distance=1.0; Neighbor=x
+DestNode=y; Distance=2.0; Neighbor=x
+DestNode=z; Distance=4.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:10 
+###Received. Dst Node=u; Sequence number=7
+DestNode=z; Distance=4.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:10 
+###Received. Dst Node=u; Sequence number=8
+DestNode=z; Distance=4.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:10 
+###Received. Dst Node=u; Sequence number=9
+DestNode=z; Distance=4.0; Neighbor=x
+## Send.Source Node=u; Sequence Number=4
+DestNode=v; Distance=2.0; Neighbor=v
+DestNode=w; Distance=3.0; Neighbor=x
+DestNode=x; Distance=1.0; Neighbor=x
+DestNode=y; Distance=2.0; Neighbor=x
+DestNode=z; Distance=4.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:13 
+###Received. Dst Node=u; Sequence number=10
+DestNode=z; Distance=4.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:13 
+###Received. Dst Node=u; Sequence number=11
+DestNode=z; Distance=4.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:13 
+###Received. Dst Node=u; Sequence number=12
+DestNode=z; Distance=4.0; Neighbor=x
+终点：v, 距离：2.0,下一跳：v
+终点：w, 距离：3.0,下一跳：x
+终点：x, 距离：1.0,下一跳：x
+终点：y, 距离：2.0,下一跳：x
+终点：z, 距离：4.0,下一跳：x
+关闭该节点
+ 2021.  6.  11 2021/ 6/11 23:45:16 
+###Received. Dst Node=u; Sequence number=13
+DestNode=z; Distance=4.0; Neighbor=x
+u的邻居节点v已经被关闭
+u的邻居节点x已经被关闭
+重新启动该节点
+## Send.Source Node=u; Sequence Number=5
+DestNode=v; Distance=20.0; Neighbor=v
+DestNode=w; Distance=20.0; Neighbor=x
+DestNode=x; Distance=20.0; Neighbor=x
+DestNode=y; Distance=20.0; Neighbor=x
+DestNode=z; Distance=20.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=14
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=15
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=16
+DestNode=z; Distance=23.0; Neighbor=x
+终点：v, 距离：20.0,下一跳：v
+终点：w, 距离：22.0,下一跳：x
+终点：x, 距离：20.0,下一跳：x
+终点：y, 距离：21.0,下一跳：x
+终点：z, 距离：23.0,下一跳：x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=17
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=18
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=19
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=20
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=21
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=22
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=23
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=24
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=25
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=26
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=27
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:35 
+###Received. Dst Node=u; Sequence number=28
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:36 
+###Received. Dst Node=u; Sequence number=29
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:36 
+###Received. Dst Node=u; Sequence number=30
+DestNode=z; Distance=23.0; Neighbor=x
+## Send.Source Node=u; Sequence Number=6
+DestNode=v; Distance=20.0; Neighbor=v
+DestNode=w; Distance=22.0; Neighbor=x
+DestNode=x; Distance=20.0; Neighbor=x
+DestNode=y; Distance=21.0; Neighbor=x
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:38 
+###Received. Dst Node=u; Sequence number=31
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:39 
+###Received. Dst Node=u; Sequence number=32
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:39 
+###Received. Dst Node=u; Sequence number=33
+DestNode=z; Distance=23.0; Neighbor=x
+## Send.Source Node=u; Sequence Number=7
+DestNode=v; Distance=20.0; Neighbor=v
+DestNode=w; Distance=22.0; Neighbor=x
+DestNode=x; Distance=20.0; Neighbor=x
+DestNode=y; Distance=21.0; Neighbor=x
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:41 
+###Received. Dst Node=u; Sequence number=34
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:42 
+###Received. Dst Node=u; Sequence number=35
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:42 
+###Received. Dst Node=u; Sequence number=36
+DestNode=z; Distance=23.0; Neighbor=x
+## Send.Source Node=u; Sequence Number=8
+DestNode=v; Distance=20.0; Neighbor=v
+DestNode=w; Distance=22.0; Neighbor=x
+DestNode=x; Distance=20.0; Neighbor=x
+DestNode=y; Distance=21.0; Neighbor=x
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:44 
+###Received. Dst Node=u; Sequence number=37
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:45 
+###Received. Dst Node=u; Sequence number=38
+DestNode=z; Distance=23.0; Neighbor=x
+终点：v, 距离：20.0,下一跳：v
+终点：w, 距离：22.0,下一跳：x
+终点：x, 距离：20.0,下一跳：x
+终点：y, 距离：21.0,下一跳：x
+终点：z, 距离：23.0,下一跳：x
+ 2021.  6.  11 2021/ 6/11 23:45:45 
+###Received. Dst Node=u; Sequence number=39
+DestNode=z; Distance=23.0; Neighbor=x
+## Send.Source Node=u; Sequence Number=9
+DestNode=v; Distance=20.0; Neighbor=v
+DestNode=w; Distance=22.0; Neighbor=x
+DestNode=x; Distance=20.0; Neighbor=x
+DestNode=y; Distance=21.0; Neighbor=x
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:47 
+###Received. Dst Node=u; Sequence number=40
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:48 
+###Received. Dst Node=u; Sequence number=41
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:48 
+###Received. Dst Node=u; Sequence number=42
+DestNode=z; Distance=23.0; Neighbor=x
+## Send.Source Node=u; Sequence Number=10
+DestNode=v; Distance=20.0; Neighbor=v
+DestNode=w; Distance=22.0; Neighbor=x
+DestNode=x; Distance=20.0; Neighbor=x
+DestNode=y; Distance=21.0; Neighbor=x
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:50 
+###Received. Dst Node=u; Sequence number=43
+DestNode=z; Distance=23.0; Neighbor=x
+ 2021.  6.  11 2021/ 6/11 23:45:51 
+###Received. Dst Node=u; Sequence number=44
+DestNode=z; Distance=23.0; Neighbor=x

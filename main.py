@@ -10,7 +10,7 @@ class dvsim():
     def read_command(self):
         # 读取一条命令
         while True:
-            command = input("请输入指令:")
+            command = input("请输入指令:\n")
             if command != "":
                 strlist = command.split(';')
                 for i in strlist:
@@ -26,10 +26,12 @@ class dvsim():
         elif tmp[0] == 'start':
             startNodeName = tmp[1]
             self.nodeDict[startNodeName].isOn = True
+            self.nodeDict[startNodeName].logFile.write('重新启动该节点\n')
 
         elif tmp[0] == 'stop':
             stopNodeName = tmp[1]
             self.nodeDict[stopNodeName].isOn = False  # 关闭节点
+            self.nodeDict[stopNodeName].logFile.write('关闭该节点\n')
 
 
 if __name__ == '__main__':
