@@ -25,6 +25,8 @@ class dvsim():
             self.nodeDict[tmp[1]] = newNode  # 将新建的节点加入字典
         elif tmp[0] == 'start':
             startNodeName = tmp[1]
+            for timer in self.nodeDict[startNodeName].timerDict:
+                self.nodeDict[startNodeName].timerDict[timer].refresh()  # 刷新重启节点的所有计时器
             self.nodeDict[startNodeName].isOn = True
             self.nodeDict[startNodeName].logFile.write('重新启动该节点\n')
 

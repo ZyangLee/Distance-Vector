@@ -1,0 +1,235 @@
+2021/ 6/12 12:45: 4 
+Initialize Success
+2021/ 6/12 12:45: 4 
+## Send.Source Node=z; Sequence Number=1
+DestNode=w; Distance=5.0; Neighbor=w
+DestNode=y; Distance=2.0; Neighbor=y
+2021/ 6/12 12:45: 4 
+## Received. Dst Node=z; Sequence number=1
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+终点：w, 距离：3.0,下一跳：y
+终点：y, 距离：2.0,下一跳：y
+终点：x, 距离：3.0,下一跳：y
+2021/ 6/12 12:45: 7 
+## Send.Source Node=z; Sequence Number=2
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=y; Distance=2.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+2021/ 6/12 12:45: 7 
+## Received. Dst Node=z; Sequence number=2
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45: 7 
+## Received. Dst Node=z; Sequence number=3
+DestNode=u; Distance=7.0; Neighbor=w
+DestNode=v; Distance=6.0; Neighbor=w
+DestNode=x; Distance=5.0; Neighbor=w
+DestNode=y; Distance=4.0; Neighbor=w
+2021/ 6/12 12:45:10 
+## Send.Source Node=z; Sequence Number=3
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=y; Distance=2.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45:10 
+## Received. Dst Node=z; Sequence number=4
+DestNode=u; Distance=6.0; Neighbor=w
+DestNode=v; Distance=6.0; Neighbor=w
+DestNode=x; Distance=5.0; Neighbor=w
+DestNode=y; Distance=4.0; Neighbor=w
+2021/ 6/12 12:45:10 
+## Received. Dst Node=z; Sequence number=5
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45:13 
+## Send.Source Node=z; Sequence Number=4
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=y; Distance=2.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45:13 
+## Received. Dst Node=z; Sequence number=6
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45:13 
+## Received. Dst Node=z; Sequence number=7
+DestNode=u; Distance=6.0; Neighbor=w
+DestNode=v; Distance=6.0; Neighbor=w
+DestNode=x; Distance=5.0; Neighbor=w
+DestNode=y; Distance=4.0; Neighbor=w
+终点：w, 距离：3.0,下一跳：y
+终点：y, 距离：2.0,下一跳：y
+终点：x, 距离：3.0,下一跳：y
+终点：u, 距离：4.0,下一跳：y
+终点：v, 距离：5.0,下一跳：y
+2021/ 6/12 12:45:16 
+## Send.Source Node=z; Sequence Number=5
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=y; Distance=2.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45:16 
+## Received. Dst Node=z; Sequence number=8
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45:16 
+## Received. Dst Node=z; Sequence number=9
+DestNode=u; Distance=6.0; Neighbor=w
+DestNode=v; Distance=6.0; Neighbor=w
+DestNode=x; Distance=5.0; Neighbor=w
+DestNode=y; Distance=4.0; Neighbor=w
+2021/ 6/12 12:45:19 
+## Send.Source Node=z; Sequence Number=6
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=y; Distance=2.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45:19 
+## Received. Dst Node=z; Sequence number=10
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45:19 
+## Received. Dst Node=z; Sequence number=11
+DestNode=u; Distance=6.0; Neighbor=w
+DestNode=v; Distance=6.0; Neighbor=w
+DestNode=x; Distance=5.0; Neighbor=w
+DestNode=y; Distance=4.0; Neighbor=w
+2021/ 6/12 12:45:22 
+## Send.Source Node=z; Sequence Number=7
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=y; Distance=2.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45:23 
+## Received. Dst Node=z; Sequence number=12
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45:24 
+## Received. Dst Node=z; Sequence number=13
+DestNode=u; Distance=6.0; Neighbor=w
+DestNode=v; Distance=6.0; Neighbor=w
+DestNode=x; Distance=5.0; Neighbor=w
+DestNode=y; Distance=4.0; Neighbor=w
+终点：w, 距离：3.0,下一跳：y
+终点：y, 距离：2.0,下一跳：y
+终点：x, 距离：3.0,下一跳：y
+终点：u, 距离：4.0,下一跳：y
+终点：v, 距离：5.0,下一跳：y
+2021/ 6/12 12:45:26 
+## Send.Source Node=z; Sequence Number=8
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=y; Distance=2.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45:27 
+## Received. Dst Node=z; Sequence number=14
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45:27 
+## Received. Dst Node=z; Sequence number=15
+DestNode=u; Distance=6.0; Neighbor=w
+DestNode=v; Distance=6.0; Neighbor=w
+DestNode=x; Distance=5.0; Neighbor=w
+DestNode=y; Distance=4.0; Neighbor=w
+2021/ 6/12 12:45:29 
+## Send.Source Node=z; Sequence Number=9
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=y; Distance=2.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45:31 
+## Received. Dst Node=z; Sequence number=16
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+2021/ 6/12 12:45:31 
+## Received. Dst Node=z; Sequence number=17
+DestNode=u; Distance=6.0; Neighbor=w
+DestNode=v; Distance=6.0; Neighbor=w
+DestNode=x; Distance=5.0; Neighbor=w
+DestNode=y; Distance=4.0; Neighbor=w
+2021/ 6/12 12:45:33 
+## Send.Source Node=z; Sequence Number=10
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=y; Distance=2.0; Neighbor=y
+DestNode=x; Distance=3.0; Neighbor=y
+DestNode=u; Distance=4.0; Neighbor=y
+DestNode=v; Distance=5.0; Neighbor=y
+终点：w, 距离：3.0,下一跳：y
+终点：y, 距离：2.0,下一跳：y
+终点：x, 距离：3.0,下一跳：y
+终点：u, 距离：4.0,下一跳：y
+终点：v, 距离：5.0,下一跳：y
+2021/ 6/12 12:45:34 
+## Received. Dst Node=z; Sequence number=18
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=x; Distance=5.0; Neighbor=y
+DestNode=u; Distance=6.0; Neighbor=y
+DestNode=v; Distance=6.0; Neighbor=y
+2021/ 6/12 12:45:34 
+## Received. Dst Node=z; Sequence number=19
+DestNode=u; Distance=8.0; Neighbor=w
+DestNode=v; Distance=6.0; Neighbor=w
+DestNode=x; Distance=7.0; Neighbor=w
+DestNode=y; Distance=4.0; Neighbor=w
+2021/ 6/12 12:45:36 
+## Send.Source Node=z; Sequence Number=11
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=y; Distance=2.0; Neighbor=y
+DestNode=x; Distance=5.0; Neighbor=y
+DestNode=u; Distance=6.0; Neighbor=y
+DestNode=v; Distance=6.0; Neighbor=y
+2021/ 6/12 12:45:37 
+## Received. Dst Node=z; Sequence number=20
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=x; Distance=7.0; Neighbor=y
+DestNode=u; Distance=8.0; Neighbor=y
+DestNode=v; Distance=6.0; Neighbor=y
+2021/ 6/12 12:45:38 
+## Received. Dst Node=z; Sequence number=21
+DestNode=u; Distance=8.0; Neighbor=w
+DestNode=v; Distance=6.0; Neighbor=w
+DestNode=x; Distance=9.0; Neighbor=w
+DestNode=y; Distance=4.0; Neighbor=w
+2021/ 6/12 12:45:39 
+## Send.Source Node=z; Sequence Number=12
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=y; Distance=2.0; Neighbor=y
+DestNode=x; Distance=7.0; Neighbor=y
+DestNode=u; Distance=8.0; Neighbor=y
+DestNode=v; Distance=6.0; Neighbor=y
+2021/ 6/12 12:45:41 
+## Received. Dst Node=z; Sequence number=22
+DestNode=w; Distance=3.0; Neighbor=y
+DestNode=x; Distance=20.0; Neighbor=y
+DestNode=u; Distance=8.0; Neighbor=y
+DestNode=v; Distance=6.0; Neighbor=y
+2021/ 6/12 12:45:42 
+## Received. Dst Node=z; Sequence number=23
+DestNode=u; Distance=8.0; Neighbor=w
+DestNode=v; Distance=6.0; Neighbor=w
+DestNode=x; Distance=20.0; Neighbor=w
+DestNode=y; Distance=4.0; Neighbor=w

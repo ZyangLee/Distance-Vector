@@ -17,6 +17,7 @@ class Node:
         self.timerDict = {}  # 节点对应计时器字典
         self.neighbor = {}  # 目前只存端口号
         self.routeTable = {}
+        self.routeTableBackUp = {}
         self.isOn = True
         self.routeTableLock = threading.Lock()
         # 网络端口初始化
@@ -53,6 +54,7 @@ class Node:
             tmp = info.split(';')
             self.neighbor[tmp[0]] = int(tmp[2])  # neighbor字典中value为指定节点端口号
             self.routeTable[tmp[0]] = [float(tmp[1]), tmp[0]]
+            self.routeTableBackUp[tmp[0]] = [float(tmp[1]), tmp[0]]
         self.routeTableLock.release()
 
     # 根据configFile初始化参数
@@ -76,7 +78,7 @@ class Node:
             self.sendNum += 1
             head = f'## Send.Source Node={self.name}; Sequence Number={self.sendNum}\n'
             logMessage = self.makeLog(self.routeTable)
-            self.logFile.write(head + logMessage)
+            self.logFile.write(get_time_string() + head + logMessage)
             # print(head + logMessage, end='')
             info = packet.make(self.name, self.routeTable)  # 制作数据
             for name in self.neighbor:  # 给每个邻居发送路由信息包
@@ -92,11 +94,18 @@ class Node:
         receiveRouteTable = {}
         for perSwitchInfo in switchInfoList:
             destNode = perSwitchInfo[2]  # 目的节点
-            if destNode == self.name:  # 如果目的节点是自己，直接跳过
+            if destNode == self.name:  # 如果目的节点是自己，直接跳过，路由表中不存自己到自己的信息
                 continue
-            neighbor = perSwitchInfo[0]  # 下一跳
-            distance = float(perSwitchInfo[1]) + routeTable[neighbor][0]  # 距离
-            receiveRouteTable = {destNode: [neighbor, distance]}
+            neighbor = perSwitchInfo[0]  # 下一跳（路由信息的发送方）
+            if self.routeTable[neighbor][0] == self.unreachable:  # 邻居节点曾被关闭过，现在又重启（又能接收到邻居节点消息）
+                # 将路由表中关于重启节点的信息初始化
+                self.routeTable[neighbor][0] = self.routeTableBackUp[neighbor][0]
+                self.routeTable[neighbor][1] = self.routeTableBackUp[neighbor][1]
+            if float(perSwitchInfo[1]) == self.unreachable:  # 如果接收到的路由信息有某节点的不可达信息
+                distance = float(perSwitchInfo[1])
+            else:
+                distance = float(perSwitchInfo[1]) + routeTable[neighbor][0]  # 距离
+            receiveRouteTable[destNode] = [distance, neighbor]  # 更新接收路由表
             self.timerDict[neighbor].refresh()  # 收到邻居路由器消息，重置该邻居计时器
             # 原路由表中没有destNode，则添加
             if destNode not in routeTable:
@@ -119,8 +128,9 @@ class Node:
             self.routeTable, receivedRouteTable = self.refresh_route_table(info, self.routeTable)
             # 记录刚才接收到的包裹
             self.receiveNum += 1
-            logMessageHead = f'###Received. Dst Node={self.name}; Sequence number={self.receiveNum}\n'
-            self.logFile.write(get_time_string() + logMessageHead + self.makeLog(receivedRouteTable))
+            logMessageHead = f'## Received. Dst Node={self.name}; Sequence number={self.receiveNum}\n'
+            logMessage = self.makeLog(receivedRouteTable)
+            self.logFile.write(get_time_string() + logMessageHead + logMessage)
             # print(logMessageHead + self.makeLog(receivedRouteTable))
             self.routeTableLock.release()
 
@@ -134,7 +144,7 @@ class Node:
         # 将一个字典型的信息转换成日志文件中的记录
         tmp = ''
         for name in routeTable:
-            tmp += f'DestNode={name}; Distance={self.routeTable[name][0]}; Neighbor={self.routeTable[name][1]}\n'
+            tmp += f'DestNode={name}; Distance={routeTable[name][0]}; Neighbor={routeTable[name][1]}\n'
         return tmp
 
     def check(self):
@@ -171,16 +181,13 @@ class Node:
 
 
 def get_time_string():
-    datestring = "% d. % d. % d" % (time.localtime(time.time()).tm_year,
-                                    time.localtime(time.time()).tm_mon,
-                                    time.localtime(time.time()).tm_mday)
     timestring = "%4d/%2d/%2d %2d:%2d:%2d " % (
         time.localtime(time.time()).tm_year, time.localtime(time.time()).tm_mon,
         time.localtime(time.time()).tm_mday,
         time.localtime(time.time()).tm_hour, time.localtime(time.time()).tm_min,
         time.localtime(time.time()).tm_sec
     )
-    return datestring + " " + timestring + "\n"
+    return timestring + "\n"
 
 
 

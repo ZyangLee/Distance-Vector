@@ -13,8 +13,8 @@ def extract(switchInfo):
     for info in data:
         tmp = info.split(';')
         # srcNode = tmp[0]
-        # DestNode = tmp[1]
-        # Distance = tmp[2]
+        # distance = tmp[1]
+        # destNode = tmp[2]
         tmpList = [tmp[0], tmp[1], tmp[2]]
         switchInfoList.append(tmpList)
     return switchInfoList
